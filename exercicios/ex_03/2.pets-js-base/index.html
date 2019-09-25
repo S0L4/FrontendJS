@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<head>
+
+    <title>Exercícios</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<script>
+
+	let pets = [{
+            nome: "Doguinho A",
+            idade: 4,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Doguinho B",
+            idade: 5,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Doguinho C",
+            idade: 11,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Gatinho A",
+            idade: 17,
+            tipoPet: "gato"
+        }, {
+            nome: "Gatinho H",
+            idade: 2,
+            tipoPet: "gato"
+        }, {
+            nome: "Passarinho A",
+            idade: 12,
+            tipoPet: "pássaro"
+        }, {
+            nome: "Doguinho Z",
+            idade: 16,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Doguinho H",
+            idade: 4,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Gatinho P",
+            idade: 3,
+            tipoPet: "gato"
+        }];
+
+        console.log(pets);
+
+
+        // 1.Liste somente os animais cujo tipo seja igual a gato
+
+        // let returnGato = pets.filter(element => {
+        //     return element.tipoPet === 'gato'
+        // })
+        // console.log(returnGato);
+
+
+        // 2.Liste somente os animais cuja idade seja superior a 7
+
+        // let returnIdade = pets.filter(element => {
+        //     return element.idade >= 7         
+        // })
+        // console.log(returnIdade);
+
+
+        // 3.Traga somente os nomes dos pets;
+
+        // let nomePets = pets.map(element => {
+        //     return element.nome
+        // })
+        // console.log(nomePets)
+        
+
+        // 4.Adicione mais um pet chamado doguinho, cuja idade é igual a 13 e o tipo seja cachorro
+
+        // pets.push({
+        //     nome: "Douginho",
+        //     idade: 13,
+        //     tipoPet: "cachorro"
+        // })
+        // console.log(pets);
+
+
+        // 5.Mostre a quantidade de cachorros que possuem na lista
+
+        // let returnCachorro = pets.filter(element => {
+        //     return element.tipoPet === 'cachorro'
+        // })
+        // quantCachorro = returnCachorro.length;
+        // console.log(quantCachorro);
+
+
+        // DESAFIOS
+
+
+        // 1.Some a idade de todos os pets
+        
+        // let idadePets = pets.map(element => {
+        //     return element.idade
+        // })
+        
+        // let addIdade = idadePets.reduce((total, element) => {
+        //     return Number(total) + Number(element)
+        // })
+
+        // console.log(addIdade);
+
+</script>
+
+<body>
+
+</body>
+
+</html>

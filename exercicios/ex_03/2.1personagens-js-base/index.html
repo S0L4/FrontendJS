@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Exercícios</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        let personagens = [{
+            nome: "Capitão Cometa",
+            dataAparicao: 1951,
+            editora: "DC"
+        }, {
+            nome: "Lanterna Verde",
+            dataAparicao: 1940,
+            editora: "DC"
+        }, {
+            nome: "Ciborgue",
+            dataAparicao: 1980,
+            editora: "DC"
+        }, {
+            nome: "Homem Aranha",
+            dataAparicao: 1962,
+            editora: "Marvel"
+        }, {
+            nome: "Homem de Ferro",
+            dataAparicao: 1963,
+            editora: "Marvel"
+        }, {
+            nome: "Capitão América",
+            dataAparicao: 1940,
+            editora: "Marvel"
+        }];
+
+        console.log(personagens)
+
+        // 1.Liste somente os personagens cuja editora seja Marvel
+
+        // let persoMarvel = personagens.filter(element => {
+        //     return element.editora === 'Marvel'
+        // })
+        // console.log(persoMarvel)
+
+
+        // 2.Liste somente os personagem cuja data de Aparição seja superior a 1950
+        
+        // let data1950 = personagens.filter(element => {
+        //     return element.dataAparicao > 1950
+        // })
+        // console.log(data1950)
+
+
+        // 3.Traga somente os nomes dos personagens
+        
+        // let nomePerso = personagens.map(element => {
+        //     return element.nome
+        // })
+        // console.log(nomePerso)
+
+
+        // 4.	Adicione mais um personagem chamado Capitã Marvel, data de Aparição 1977 e editora Marvel
+
+        // personagens.push({
+        //     nome: "Capitã Marvel",
+        //     dataAparicao: 1977,
+        //     editora: "Marvel"
+        // })
+        // console.log(personagens)
+
+
+        // 5.Mostre a quantidade de personagens da Marvel que possuem na lista
+
+        // let returnMarvel = personagens.filter(element => {
+        //     return element.editora === 'Marvel'
+        // })
+        // quantMarvel = returnMarvel.length
+        // console.log(quantMarvel)
+
+
+        // DESAFIO 
+
+
+        // 1.Some a idade de todos os personagens
+        
+        // let contaIdade = personagens.filter(element => {
+        //     return element.dataAparicao = 2019 - element.dataAparicao
+        // })
+
+        // let idadeAtual = personagens.map(element => {
+        //     return element.dataAparicao
+        // })
+
+        // console.log(idadeAtual)
+        
+        // let addIdade = idadeAtual.reduce((total, element) => {
+        //     return Number(total) + Number(element)
+        // })
+
+        // console.log(addIdade)
+
+
+        // 2.Mostre o nome do personagem e a sua idade(data de nascimento é a data de aparição)
+
+        // let contaIdade = personagens.filter(element => {
+        //     return element.dataAparicao = 2019 - element.dataAparicao
+        // })
+        // console.log(personagens[0])
+    </script>
+
+</body>
+
+</html>
