@@ -58,7 +58,7 @@ body {
 }
 
 .pokemonButton {
-    background-color: #ECDDF3;
+    background-color: black;
     color: #000000;
     border-radius: 50px;
     border: 0;
@@ -83,11 +83,10 @@ button[disabled] {
 
 button:enabled,
 button[enabled] {
-    border: 1px solid #999999;
+    border: 1px solid black;
     background-color: #ECDDF3;
     color: #ffffff;
 }
-
 
 .pokemonButton:hover {
     background-color: red;
@@ -107,4 +106,12 @@ button[enabled] {
     justify-content: center;
     align-items: center;
     color: #ffffff;
+}
+
+#pokemonList {
+        border: 1px solid black;
+        width: 100%;
+        height: 50px;
+        padding: 15px;
+        text-align: left;  
 }

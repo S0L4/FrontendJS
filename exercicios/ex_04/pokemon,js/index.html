@@ -49,9 +49,9 @@
 
     <script>
         const tabelaPokemon = document.querySelector("#pokemonListCorpo");
-        const url = 'https://pokeapi.co/api/v2/pokemon';
         const inputPokemon = document.querySelector("#pokemonInput");
         const buttonPokemon = document.querySelector("#newsButton");
+        const url = 'https://pokeapi.co/api/v2/pokemon';
 
         fetch(url)
             .then(resposta => resposta.json())
