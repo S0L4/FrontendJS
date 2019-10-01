@@ -12,29 +12,52 @@ class Categorias extends Component {
         super();
         this.state = {
             lista: [
-                // { idCategoria: 1, nome: 'Desing' },
-                // { idCategoria: 2, nome: 'Jogos' },
-                // { idCategoria: 3, nome: 'Meetup' },
-            ]
+
+            ],
+            nome: ""
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
+       this.listarCategoria();
+    }
+
+    listarCategoria = () =>{
         fetch('http://192.168.7.85:5000/api/categorias')
-            .then(response => response.json())
-            .then(data => this.setState({lista: data}));
-            
-    }   
+        .then(response => response.json())
+        .then(data => this.setState({ lista: data }));
+    }
 
-    adicionaItem = (event) => {
-        event.preventDefault();
+    // adicionaItem = (event) => {
+    //     event.preventDefault();
 
-        let lista = { idCategoria: 4, nome: 'Nova categoria' }
-        let lista_state = this.state.lista;
+    //     let lista = { idCategoria: 4, nome: 'Nova categoria' }
+    //     let lista_state = this.state.lista;
+
+    //     lista_state.push(lista);
+
+    //     this.setState({ lista: lista_state });
+    // }
+
+    cadastrarCategoria = (event) => {
+        event.preventDefault(); 
         
-        lista_state.push(lista);
+        fetch('http://192.168.7.85:5000/api/categorias' , {
+            method: "POST",
+            body: JSON.stringify({ nome: this.state.nome }),
+            headers: {
+                "Content-Type" : "application/json"
+            }
+        })
+            .then(respose => this.listarCategoria())
+            .catch(error => console.log(error)); 
+            
+    }
 
-        this.setState({lista: lista_state});
+    nomeCategoria = (event) => {
+        console.log(event.target.value);
+        this.setState({nome: event.target.value});
+        console.log(this.state)
     }
 
     render() {
@@ -79,18 +102,19 @@ class Categorias extends Component {
                             <h2 className="conteudoPrincipal-cadastro-titulo">
                                 Cadastrar Categoria
                   </h2>
-                            <form>
+                            <form onSubmit={this.cadastrarCategoria}>
                                 <div className="container">
                                     <input
                                         type="text"
                                         className="className__categoria"
                                         id="input__categoria"
                                         placeholder="tipo do evento"
+                                        value={this.state.nome}
+                                        onChange={this.nomeCategoria}
                                     />
                                     <button
                                         id="btn__cadastrar"
                                         className="conteudoPrincipal-btn conteudoPrincipal-btn-cadastro"
-                                        onClick={this.adicionaItem}
                                     >
                                         Cadastrar
                       </button>
